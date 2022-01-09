@@ -9,10 +9,10 @@ LIB_NAME = libft.a
 all : $(NAME)
 
 $(NAME) :
-	make -C $(LIBFT)
-	make -C $(MINILIBX)
-	gcc -c $(SRC)
-	gcc -o $(NAME) $(L_O) $(LIB)
+	make -C $(LIBFT) 2>/dev/null
+	make -C $(MINILIBX) 2>/dev/null
+	gcc -c $(SRC) 2>/dev/null
+	gcc -o $(NAME) $(L_O) $(LIB) 2>/dev/null
 
 clean :
 	make clean -C $(LIBFT)
